@@ -48,7 +48,7 @@ namespace Web.Portal
                     Panel pn = new Panel();
                     foreach (PortalImagem ls in lsPortal[i].ListaImagem)
                     {
-                        string caminho = "../upload/Portal/tmp/" + ls.Diretorio;
+                        string caminho = "../upload/Portal/" + ls.Diretorio;
                         string caminhoTemp = "../upload/Portal/tmp/" + ls.Diretorio;
                         LiteralControl lcImagens = new LiteralControl(
                             "<a rel='gal" + i.ToString() + "' href='" + caminho + "' class='nyroModal' title='" + ls.Imagem + "' ><img src='" + caminhoTemp + "' Width=50px Height=50px/></a>"
