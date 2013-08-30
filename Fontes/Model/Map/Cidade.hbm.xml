@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Cidade" table="cidade">
+    <id name="Codigo">
+      <column name="CID_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <many-to-one name="Estado" class="Estado" column="ESTADO_EST_COD" foreign-key="FK_CidadeEstado" cascade="save-update" not-null="true" />
+    <property name="Descricao" column="CID_DESCRICAO" type="string" not-null="true" />
+  </class>
+</hibernate-mapping>

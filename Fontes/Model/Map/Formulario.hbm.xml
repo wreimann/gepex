@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Formulario,Model" table="formulario" lazy="false">
+    <id name="Codigo">
+      <column name="FOR_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Descricao" column="FOR_DESCRICAO" type="string" not-null="true" />
+    <property name="Situacao" column="FOR_SITUACAO" type="bool" not-null="true" />
+  </class>
+</hibernate-mapping>

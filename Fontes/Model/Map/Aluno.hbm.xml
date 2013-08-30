@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Aluno,Model" table="aluno" lazy="false">
+    <id name="Codigo">
+      <column name="ALU_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <many-to-one name="Pessoa" class="Pessoa" column="PESSOA_PES_COD" foreign-key="FK_AlunoPessoa" cascade="save-update" not-null="true"/>
+    <property name="Matricula" column="ALU_MATRICULA" type="decimal" not-null="true" />
+    <property name="Sites" column="ALU_SITES" type="bool" not-null="true" />
+    <property name="BolsaFamilia" column="ALU_BOLSA_FAMILIA" type="bool" not-null="true" />
+    <property name="Medicar" column="ALU_MEDICAR" type="bool" not-null="true" />
+    <property name="Pai" column="ALU_PAI" type="string" not-null="false" />
+    <property name="Mae" column="ALU_MAE" type="string" not-null="false" />
+    <property name="Emergencia" column="ALU_EMERGENCIA" type="decimal" not-null="true" />
+    <property name="Contato" column="ALU_CONTATO" type="string" not-null="true" />
+    <property name="ConvenioMedico" column="ALU_CONVENIO_MEDICO" type="string" not-null="false" />
+    <property name="CarteirinhaConvenio" column="ALU_CARTEIRINHA_CONVENIO" type="string" not-null="false" />
+    <property name="TelefoneConvenio" column="ALU_TELEFONE_CONVENIO" type="decimal" not-null="false" />
+    <property name="Altura" column="ALU_ALTURA" type="decimal" not-null="false" />
+    <property name="Peso" column="ALU_PESO" type="decimal" not-null="false" />
+    <property name="TipoSanguineo" column="ALU_TIPO_SANGUINEO" type="string" not-null="false" />
+    <property name="FatorRH" column="ALU_FATOR_RH" type="string" not-null="false" />
+    <property name="Alergias" column="ALU_ALERGIAS" type="string" not-null="false" />
+    <property name="Observacao" column="ALU_OBSERVACAO" type="string" not-null="false" />
+    <property name="Medicamentos" column="ALU_MEDICAMENTOS" type="string" not-null="false" />
+    <property name="Situacao" column="ALU_SITUACAO" type="string" not-null="true" />
+    <property name="OutrosTransportes" column="ALU_OUTROS_TRANSPORTES" type="string" not-null="false" />
+    <property name="OutrosBeneficios" column="ALU_OUTROS_BENEFICIOS" type="string" not-null="false" />
+  </class>
+</hibernate-mapping>

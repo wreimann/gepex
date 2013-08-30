@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.PlanejamentoPedagogico,Model" table="planejamento_pedagogico" lazy="false">
+    <id name="Codigo">
+      <column name="PLP_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <many-to-one name="Turma" class="Turma" column="TURMA_TUR_COD" foreign-key="FK_PlanejPedagTurma" cascade="save-update" not-null="true" />
+    <property name="ObjetivoGeral" column="PLP_OBJETIVO_GERAL" type="string" not-null="true" />
+    <property name="CompetenciaHabilidades" column="PLP_COMPETENCIA_HABILIDADES" type="string" not-null="true" />
+    <property name="Ementa" column="PLP_EMENTA" type="string" not-null="true" />
+    <property name="CargaHoraria" column="PLP_CARGA_HORARIA" type="int" not-null="true" />
+    <property name="DataInicial" column="PLP_DATA_INICIAL" type="DateTime" not-null="true" />
+    <property name="DataFinal" column="PLP_DATA_FINAL" type="DateTime" not-null="true" />
+    <property name="DataCadastro" column="PLP_DATA_CADASTRO" type="DateTime" not-null="true" />
+    <many-to-one name="Disciplina" class="Disciplina" column="DISCIPLINA_DIS_COD" foreign-key="FK_PlanejPedagDisciplina" cascade="save-update" not-null="true" />
+    <bag name="ListaConteudo" inverse="true" lazy="true" cascade="all" table="conteudo_programatico_pedagogico" >
+      <key column="PLANEJAMENTO_PEDAGOGICO_PLP_COD" />
+      <one-to-many class="Model.Entidade.ConteudoPedagogico" />
+    </bag>
+  </class>
+</hibernate-mapping>

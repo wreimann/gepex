@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Portal,Model" table="portal" lazy="false">
+    <id name="Codigo">
+      <column name="POR_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Descricao" column="POR_DESCRICAO" type="string" not-null="false" />
+    <property name="Titulo" column="POR_TITULO" type="string" not-null="true" />
+    <property name="Tipo" column="POR_TIPO" type="string" not-null="true" />
+    <property name="Data" column="POR_DATA" type="DateTime" not-null="true" />
+    <bag name="ListaImagem" inverse="true" lazy="true" cascade="all" table="portal_imagem" >
+      <key column="PORTAL_POR_COD" />
+      <one-to-many class="Model.Entidade.PortalImagem" />
+    </bag>
+  </class>
+</hibernate-mapping>

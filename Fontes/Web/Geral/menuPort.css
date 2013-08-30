@@ -1,0 +1,80 @@
+/* --------------------------
+AUTHOR : STYLED menuPortalS
+URL : http://www.styledmenuPortals.com
+Copyrights by STYLED menuPortalS
+----------------------------*/
+	#menuPortal{		
+		width:160px;	
+	}
+		#menuPortal ul{
+			list-style:none;
+			margin-left:2px;
+			
+			
+		}
+			#menuPortal li{
+				list-style:none;
+                margin:2px 0;
+			}
+				#menuPortal li a{
+					list-style:none;
+					background:#82837c;
+					color:#fff;
+					text-transform:uppercase;
+					font-size:11px;
+					font-weight:bold;
+					text-decoration:none;
+					border:solid #777776;
+					border-width:0 6px 0 6px;
+					display:block;
+					height:30px;
+					line-height:30px;
+					padding:0 0 0 10px;
+				}
+					#menuPortal li a:hover{
+						background:#777776;
+						color:#fff;
+						text-decoration:none;
+					}
+				#menuPortal li a.green{
+					background:#83ad3e;
+					border:solid #6f9234;
+					border-width:0 6px 0 6px;
+				}
+					#menuPortal li a:hover.green{
+						background:#6f9234;
+					}
+				#menuPortal li a.blue{
+					background:#4396bd;
+					border:solid #377e9f;
+					border-width:0 6px 0 6px;
+				}
+					#menuPortal li a:hover.blue{
+						background:#377e9f;
+					}
+				#menuPortal li a.orange{
+					background:#ff7327;
+					border:solid #d65611;
+					border-width:0 6px 0 6px;
+				}
+					#menuPortal li a:hover.orange{
+						background:#d65611;
+					}
+				#menuPortal li a.brn{
+					background:#a53cbe;
+					border:solid #87249f;
+					border-width:0 6px 0 6px;
+				}
+				#menuPortal li a:hover.brn{
+					background:#87249f;
+				}
+                #menuPortal li a.red{
+					background:#FF0666;
+					border:solid #FF0999;
+					border-width:0 6px 0 6px;
+				}
+					#menuPortal li a:hover.red{
+						background:#FF0999;
+					}
+
+

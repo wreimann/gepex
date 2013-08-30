@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.PlanejamentoClinico,Model" table="planejamento_clinico" lazy="false">
+    <id name="Codigo">
+      <column name="PLC_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="ObjetivoGeral" column="PLC_OBJETIVO_GERAL" type="string" not-null="true" />
+    <property name="CompetenciaHabilidades" column="PLC_COMPETENCIA_HABILIDADES" type="string" not-null="true" />
+    <property name="DataInicial" column="PLC_DATA_INICIAL" type="DateTime" not-null="true" />
+    <property name="DataFinal" column="PLC_DATA_FINAL" type="DateTime" not-null="true" />
+    <property name="DataCadastro" column="PLC_DATA_CADASTRO" type="DateTime" not-null="true" />
+    <property name="NumeroAtendimento" column="PCL_NUMERO_ATENDIMENTOS" type="int" not-null="true" />
+    <many-to-one name="Profissao" class="Profissao" column="PROFISSAO_PRO_COD" foreign-key="FK_PlanejClinicoProfissao" cascade="save-update" not-null="true" />
+    <many-to-one name="Aluno" class="Aluno" column="ALUNO_ALU_COD" foreign-key="FK_PlanejClinicoAluno" cascade="save-update" not-null="true" />
+  </class>
+</hibernate-mapping>

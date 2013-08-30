@@ -1,0 +1,6 @@
+Como instalar?
+
+1 - Baixe a última versão do cliente do TortoiseSVN.
+2 - Adicione os elementos “bin obj *.suo *.user” como feito acima em “Global ignore patterns“
+3 - Feche o Visual Studio.
+4 - Instale o AnkhSvn-2.1.8420.8.msi

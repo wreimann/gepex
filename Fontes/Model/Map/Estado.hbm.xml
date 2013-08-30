@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Estado" table="estado">
+    <id name="Codigo">
+      <column name="EST_COD" sql-type="int" not-null="true" />
+      <generator class="increment" />
+    </id>
+    <property name="Descricao"> 
+      <column name="EST_DESCRICAO" sql-type="varchar(50)" not-null="true" />
+    </property>
+    <property name="Sigla">
+      <column name="EST_SIGLA" sql-type="char(2)" not-null="true" />
+    </property> 
+  </class>
+</hibernate-mapping>

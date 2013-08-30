@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Pessoa" table="pessoa" lazy="false">  
+    <id name="Codigo">
+      <column name="PES_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Nome" column="PES_NOME" type="string" not-null="true" />
+    <property name="Tipo" column="PES_TIPO" type="string" not-null="true" />
+    <property name="Nacionalidade" column="PES_NASCIONALIDADE" type="string" />
+    <property name="Naturalidade" column="PES_NATURALIDADE" type="string" />
+    <property name="Sexo" column="PES_SEXO" type="string" not-null="true" />
+    <property name="DataNascimento" column="PES_DATA_NASCIMENTO" type="DateTime" not-null="true" />
+    <property name="EstadoCivil" column="PES_ESTADO_CIVIL" type="string" not-null="false" />
+    <property name="Predical" column="PES_PREDICAL" type="int" not-null="true" />
+    <property name="Complemento" column="PES_COMPLEMENTO" type="string" />
+    <property name="Telefone" column="PES_TELEFONE" type="decimal" not-null="false" />
+    <property name="Celular" column="PES_CELULAR" type="decimal" not-null="false" />
+    <property name="Foto" column="PES_FOTO" type="string" />
+    <property name="Email" column="PES_EMAIL" type="string" />
+    <many-to-one name="CorRaca" class="CorRaca" column="PES_CRA_COD" cascade="save-update" not-null="true"/>
+    <many-to-one name="Endereco" class="Endereco" column="ENDERECO_END_COD" foreign-key="FK_PessoaEndereco" cascade="save-update" not-null="true"/>
+    <property name="IdentificacaoCopel" column="PES_IND_COPEL" type="int" not-null="false" />
+    <bag name="PessoaDocumento" inverse="true" lazy="true" cascade="all-delete-orphan" table="pessoa_documento" >
+      <key column="PESSOA_PES_COD" />
+      <one-to-many class="Model.Entidade.PessoaDocumento" />
+    </bag>
+    </class>
+</hibernate-mapping>

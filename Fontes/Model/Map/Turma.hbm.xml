@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Turma,Model" table="turma" lazy="false">
+    <id name="Codigo">
+      <column name="TUR_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Serie" column="TUR_SERIE" type="string" not-null="true" />
+    <property name="SerieTurma" column="TUR_TURMA" type="string" not-null="true" />
+    <property name="Ensino" column="TUR_ENSINO" type="string" not-null="true" />
+    <property name="Sala" column="TUR_SALA" type="int" not-null="false" />
+    <property name="AnoLetivo" column="TUR_ANO_LETIVO" type="int" not-null="true" />
+    <property name="Situacao" column="TUR_SITUACAO" type="string" not-null="true" />
+    <property name="Observacao" column="TUR_OBSERVACAO" type="string" not-null="false" />
+    <property name="Periodo" column="TUR_PERIODO" type="string" not-null="true" />
+    <property name="NumeroMaximoAlunos" column="TUR_NUMERO_MAXIMO_ALUNOS" type="int" not-null="true" />
+    <property name="AnoMinimo" column="TUR_ANO_MINIMO" type="int" not-null="true" />
+    <property name="AnoMaximo" column="TUR_ANO_MAXIMO" type="int" not-null="false" />
+    <bag name="GradeHorario" inverse="true" lazy="true" table="grade_horario" order-by="TURMA_TUR_COD asc,GRH_DIA_SEMANA asc,GRH_HORARIO asc" >
+      <key column="TURMA_TUR_COD" />
+      <one-to-many class="Model.Entidade.GradeHorario" />
+    </bag>
+    <bag name="AlunosMatriculados" inverse="true" lazy="true" table="matricula" order-by="TURMA_TUR_COD asc, ALUNO_ALU_COD asc" >
+      <key column="TURMA_TUR_COD" />
+      <one-to-many class="Model.Entidade.Matricula" />
+    </bag>
+  </class>
+</hibernate-mapping>

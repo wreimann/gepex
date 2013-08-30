@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Compromisso,Model" table="compromisso" lazy="false">
+    <id name="Codigo">
+      <column name="COM_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <many-to-one name="Agenda" class="Agenda" column="AGENDA_AGE_COD" foreign-key="FK_CompromissoAgenda" cascade="save-update" not-null="true" />
+    <many-to-one name="Aluno" class="Aluno" column="ALUNO_ALU_COD" foreign-key="FK_CompromissoAluno" cascade="save-update" not-null="true" />
+    <many-to-one name="Profissao" class="Profissao" column="PROFISSAO_PRO_COD" foreign-key="COMPROMISSO_ESPECIALIDADE" cascade="save-update" not-null="true" />
+    <property name="Data" column="COM_DATA" type="DateTime" not-null="true" />
+    <property name="HorarioInicial" column="COM_HORARIO_INICIAL" type="DateTime" not-null="true" />
+    <property name="HorarioFinal" column="COM_HORARIO_FINAL" type="DateTime" not-null="true" />
+    <property name="Situacao" column="COM_SITUACAO" type="string" not-null="true" />
+    <property name="Motivo" column="COM_MOTIVO" type="string" not-null="true" />    
+  </class>
+</hibernate-mapping>

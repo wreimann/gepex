@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Permissao,Model" table="permissao" lazy="false">
+    <id name="Codigo">
+      <column name="PER_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Acesso" column="PER_ACESSO" type="bool" not-null="true" />
+    <property name="Inclui" column="PER_INCLUIR" type="bool" not-null="true" />
+    <property name="Exclui" column="PER_EXCLUIR" type="bool" not-null="true" />
+    <property name="Altera" column="PER_ALTERAR" type="bool" not-null="true" />
+    <many-to-one name="Perfil" class="Perfil" column="PERFIL_PER_COD" foreign-key="FK_PermissaoPerfil" cascade="save-update" not-null="true" />
+    <many-to-one name="Formulario" class="Formulario" column="FORMULARIO_FOR_COD" foreign-key="FK_PermissaoFormulario" cascade="save-update" not-null="true" />
+  </class>
+</hibernate-mapping>

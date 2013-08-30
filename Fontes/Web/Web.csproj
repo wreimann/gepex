@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57D66807-FB3A-44A0-BB70-F3F25F2B869B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Biblioteca de Terceiros\Ajax Control ToolKit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Biblioteca de Terceiros\NHibernate\Required_For_LazyLoading\Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Biblioteca de Terceiros\NHibernate\Required_For_LazyLoading\Castle\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Biblioteca de Terceiros\NHibernate\Required_Bins\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.2.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Biblioteca de Terceiros\NHibernate\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Biblioteca de Terceiros\NHibernate\Required_For_LazyLoading\Castle\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.DynamicData, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.DynamicData\3.5.0.0__31bf3856ad364e35\System.Web.DynamicData.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\icones\delete.png" />
+    <Content Include="App_Themes\icones\edit.png" />
+    <Content Include="App_Themes\icones\imprimir.png" />
+    <Content Include="App_Themes\icones\limpar.png" />
+    <Content Include="App_Themes\icones\novo.png" />
+    <Content Include="App_Themes\icones\page_edit.png" />
+    <Content Include="App_Themes\icones\pesquisar.png" />
+    <Content Include="App_Themes\icones\salvar2.png" />
+    <Content Include="App_Themes\icones\voltar.png" />
+    <Content Include="Cadastros\frmCadastrarDisciplinas.aspx" />
+    <Content Include="Consultas\frmConsultarDisciplinas.aspx" />
+    <Content Include="Consultas\frmConsultarDocente.aspx" />
+    <Content Include="Geral\estilo.css" />
+    <Content Include="Geral\EstiloFormularios.css" />
+    <Content Include="Geral\imgMenu.png" />
+    <Content Include="Geral\imgTopo.png" />
+    <Content Include="Geral\index.aspx" />
+    <Content Include="Geral\linha.png" />
+    <Content Include="Geral\logo.png" />
+    <Content Include="Geral\menu-rodape.png" />
+    <Content Include="Geral\menu_033_bg.gif" />
+    <Content Include="Geral\menu_033_h.gif" />
+    <Content Include="Geral\style.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajuda\frmSobre.aspx.cs">
+      <DependentUpon>frmSobre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajuda\frmSobre.aspx.designer.cs">
+      <DependentUpon>frmSobre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarEndereco.aspx.cs">
+      <DependentUpon>frmCadastrarEndereco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarEndereco.aspx.designer.cs">
+      <DependentUpon>frmCadastrarEndereco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarPermissoes.aspx.cs">
+      <DependentUpon>frmCadastrarPermissoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarPermissoes.aspx.designer.cs">
+      <DependentUpon>frmCadastrarPermissoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmRelatorioRequerimentoMatricula.aspx.cs">
+      <DependentUpon>frmRelatorioRequerimentoMatricula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmRelatorioRequerimentoMatricula.aspx.designer.cs">
+      <DependentUpon>frmRelatorioRequerimentoMatricula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmTrocarHorario.aspx.cs">
+      <DependentUpon>frmTrocarHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmTrocarHorario.aspx.designer.cs">
+      <DependentUpon>frmTrocarHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarEndereco.aspx.cs">
+      <DependentUpon>frmConsultarEndereco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarEndereco.aspx.designer.cs">
+      <DependentUpon>frmConsultarEndereco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\frmErro.aspx.cs">
+      <DependentUpon>frmErro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geral\frmErro.aspx.designer.cs">
+      <DependentUpon>frmErro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Util\BaseCadastro.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebServicesInterno\PessoaAutoComplete.asmx.cs">
+      <DependentUpon>PessoaAutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="botao.ascx.cs">
+      <DependentUpon>botao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="botao.ascx.designer.cs">
+      <DependentUpon>botao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmAlterarSenha.aspx.cs">
+      <DependentUpon>frmAlterarSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmAlterarSenha.aspx.designer.cs">
+      <DependentUpon>frmAlterarSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarAgendaAluno.aspx.cs">
+      <DependentUpon>frmCadastrarAgendaAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarAgendaAluno.aspx.designer.cs">
+      <DependentUpon>frmCadastrarAgendaAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarAgendaAtendimento.aspx.cs">
+      <DependentUpon>frmCadastrarAgendaAtendimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarAgendaAtendimento.aspx.designer.cs">
+      <DependentUpon>frmCadastrarAgendaAtendimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarAluno.aspx.cs">
+      <DependentUpon>frmCadastrarAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarAluno.aspx.designer.cs">
+      <DependentUpon>frmCadastrarAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarAtendimentoAluno.aspx.cs">
+      <DependentUpon>frmCadastrarAtendimentoAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarAtendimentoAluno.aspx.designer.cs">
+      <DependentUpon>frmCadastrarAtendimentoAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarChamada.aspx.cs">
+      <DependentUpon>frmCadastrarChamada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarChamada.aspx.designer.cs">
+      <DependentUpon>frmCadastrarChamada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarDisciplinas.aspx.cs">
+      <DependentUpon>frmCadastrarDisciplinas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarDisciplinas.aspx.designer.cs">
+      <DependentUpon>frmCadastrarDisciplinas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarDocente.aspx.cs">
+      <DependentUpon>frmCadastrarDocente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarDocente.aspx.designer.cs">
+      <DependentUpon>frmCadastrarDocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarGradeHorario.aspx.cs">
+      <DependentUpon>frmCadastrarGradeHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarGradeHorario.aspx.designer.cs">
+      <DependentUpon>frmCadastrarGradeHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarParametro.aspx.cs">
+      <DependentUpon>frmCadastrarParametro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarParametro.aspx.designer.cs">
+      <DependentUpon>frmCadastrarParametro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarPlanejamentoPedagogico.aspx.cs">
+      <DependentUpon>frmCadastrarPlanejamentoPedagogico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarPlanejamentoPedagogico.aspx.designer.cs">
+      <DependentUpon>frmCadastrarPlanejamentoPedagogico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarUsuario.aspx.cs">
+      <DependentUpon>frmCadastrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarUsuario.aspx.designer.cs">
+      <DependentUpon>frmCadastrarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarPlanejamentoClinico.aspx.cs">
+      <DependentUpon>frmCadastrarPlanejamentoClinico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarPlanejamentoClinico.aspx.designer.cs">
+      <DependentUpon>frmCadastrarPlanejamentoClinico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarProfissao.aspx.cs">
+      <DependentUpon>frmCadastrarProfissao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarProfissao.aspx.designer.cs">
+      <DependentUpon>frmCadastrarProfissao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarTipoDocumento.aspx.cs">
+      <DependentUpon>frmCadastrarTipoDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarTipoDocumento.aspx.designer.cs">
+      <DependentUpon>frmCadastrarTipoDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarTurma.aspx.cs">
+      <DependentUpon>frmCadastrarTurma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmCadastrarTurma.aspx.designer.cs">
+      <DependentUpon>frmCadastrarTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmGerarMatricula.aspx.cs">
+      <DependentUpon>frmGerarMatricula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmGerarMatricula.aspx.designer.cs">
+      <DependentUpon>frmGerarMatricula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\frmRequerimentoMatricula.aspx.cs">
+      <DependentUpon>frmRequerimentoMatricula.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmRequerimentoMatricula.aspx.designer.cs">
+      <DependentUpon>frmRequerimentoMatricula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarAgendaAluno.aspx.cs">
+      <DependentUpon>frmConsultarAgendaAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarAgendaAluno.aspx.designer.cs">
+      <DependentUpon>frmConsultarAgendaAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarAgendaAtendimento.aspx.cs">
+      <DependentUpon>frmConsultarAgendaAtendimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarAgendaAtendimento.aspx.designer.cs">
+      <DependentUpon>frmConsultarAgendaAtendimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarAlunos.aspx.cs">
+      <DependentUpon>frmConsultarAlunos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarAlunos.aspx.designer.cs">
+      <DependentUpon>frmConsultarAlunos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarAtendimentoAluno.aspx.cs">
+      <DependentUpon>frmConsultarAtendimentoAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarAtendimentoAluno.aspx.designer.cs">
+      <DependentUpon>frmConsultarAtendimentoAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarChamada.aspx.cs">
+      <DependentUpon>frmConsultarChamada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarChamada.aspx.designer.cs">
+      <DependentUpon>frmConsultarChamada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarDisciplinas.aspx.cs">
+      <DependentUpon>frmConsultarDisciplinas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarDisciplinas.aspx.designer.cs">
+      <DependentUpon>frmConsultarDisciplinas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarDocente.aspx.cs">
+      <DependentUpon>frmConsultarDocente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarDocente.aspx.designer.cs">
+      <DependentUpon>frmConsultarDocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarGradeHorario.aspx.cs">
+      <DependentUpon>frmConsultarGradeHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarGradeHorario.aspx.designer.cs">
+      <DependentUpon>frmConsultarGradeHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarPerfil.aspx.cs">
+      <DependentUpon>frmConsultarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarPerfil.aspx.designer.cs">
+      <DependentUpon>frmConsultarPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarPlanejamentoClinico.aspx.cs">
+      <DependentUpon>frmConsultarPlanejamentoClinico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarPlanejamentoClinico.aspx.designer.cs">
+      <DependentUpon>frmConsultarPlanejamentoClinico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarPlanejamentoPedagogico.aspx.cs">
+      <DependentUpon>frmConsultarPlanejamentoPedagogico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarPlanejamentoPedagogico.aspx.designer.cs">
+      <DependentUpon>frmConsultarPlanejamentoPedagogico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarProfissao.aspx.cs">
+      <DependentUpon>frmConsultarProfissao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarProfissao.aspx.designer.cs">
+      <DependentUpon>frmConsultarProfissao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarTipoDocumento.aspx.cs">
+      <DependentUpon>frmConsultarTipoDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarTipoDocumento.aspx.designer.cs">
+      <DependentUpon>frmConsultarTipoDocumento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarTurma.aspx.cs">
+      <DependentUpon>frmConsultarTurma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarTurma.aspx.designer.cs">
+      <DependentUpon>frmConsultarTurma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarUsuario.aspx.cs">
+      <DependentUpon>frmConsultarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultarUsuario.aspx.designer.cs">
+      <DependentUpon>frmConsultarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geral\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geral\principal.Master.cs">
+      <DependentUpon>principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geral\principal.Master.designer.cs">
+      <DependentUpon>principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Componente\Mensagem.ascx.cs">
+      <DependentUpon>Mensagem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Componente\Mensagem.ascx.designer.cs">
+      <DependentUpon>Mensagem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\CadastrarGerenciador.aspx.cs">
+      <DependentUpon>CadastrarGerenciador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\CadastrarGerenciador.aspx.designer.cs">
+      <DependentUpon>CadastrarGerenciador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\ComoApoiar.aspx.cs">
+      <DependentUpon>ComoApoiar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\ComoApoiar.aspx.designer.cs">
+      <DependentUpon>ComoApoiar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\ConsultarGerenciador.aspx.cs">
+      <DependentUpon>ConsultarGerenciador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\ConsultarGerenciador.aspx.designer.cs">
+      <DependentUpon>ConsultarGerenciador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Eventos.aspx.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Eventos.aspx.designer.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Instituicao.aspx.cs">
+      <DependentUpon>Instituicao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Instituicao.aspx.designer.cs">
+      <DependentUpon>Instituicao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Noticias.aspx.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Noticias.aspx.designer.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\portal.Master.cs">
+      <DependentUpon>portal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\portal.Master.designer.cs">
+      <DependentUpon>portal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Base.cs" />
+    <Compile Include="Util\Comum.cs" />
+    <Compile Include="Util\Constante.cs" />
+    <Compile Include="Util\EnumerableExtensions.cs" />
+    <Compile Include="Util\Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{035957B4-14ED-46A7-B475-EB12A8A710AC}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\icones\listaEspera.png" />
+    <Content Include="App_Themes\icones\add.png" />
+    <Content Include="App_Themes\icones\arrow_refresh_small.png" />
+    <Content Include="App_Themes\icones\des_novo.png" />
+    <Content Include="App_Themes\icones\fichaAluno.png" />
+    <Content Include="App_Themes\icones\planejamentoClinico.png" />
+    <Content Include="App_Themes\icones\planejamentoPedagogico.png" />
+    <Content Include="App_Themes\icones\zoom.png" />
+    <Content Include="App_Themes\Imagens\App_portal\1_02.gif" />
+    <Content Include="App_Themes\Imagens\App_portal\1_07.gif" />
+    <Content Include="App_Themes\Imagens\App_portal\1_11.gif" />
+    <Content Include="botao.ascx" />
+    <Content Include="Cadastros\frmAlterarSenha.aspx" />
+    <Content Include="Cadastros\frmCadastrarAgendaAluno.aspx" />
+    <Content Include="Cadastros\frmCadastrarAgendaAtendimento.aspx" />
+    <Content Include="Cadastros\frmCadastrarAluno.aspx" />
+    <Content Include="Cadastros\frmCadastrarAtendimentoAluno.aspx" />
+    <Content Include="Cadastros\frmCadastrarChamada.aspx" />
+    <Content Include="Cadastros\frmCadastrarDocente.aspx" />
+    <Content Include="Cadastros\frmCadastrarGradeHorario.aspx" />
+    <Content Include="Cadastros\frmCadastrarParametro.aspx" />
+    <Content Include="Cadastros\frmCadastrarPlanejamentoPedagogico.aspx" />
+    <Content Include="Cadastros\frmCadastrarUsuario.aspx" />
+    <Content Include="Cadastros\frmCadastrarPlanejamentoClinico.aspx" />
+    <Content Include="Cadastros\frmCadastrarProfissao.aspx" />
+    <Content Include="Cadastros\frmCadastrarTipoDocumento.aspx" />
+    <Content Include="Cadastros\frmCadastrarTurma.aspx" />
+    <Content Include="Cadastros\frmGerarMatricula.aspx" />
+    <Content Include="Cadastros\frmRequerimentoMatricula.aspx" />
+    <Content Include="Componente\button.gif" />
+    <Content Include="Componente\header.gif" />
+    <Content Include="Consultas\frmConsultarAgendaAluno.aspx" />
+    <Content Include="Consultas\frmConsultarAgendaAtendimento.aspx" />
+    <Content Include="Consultas\frmConsultarAlunos.aspx" />
+    <Content Include="Consultas\frmConsultarAtendimentoAluno.aspx" />
+    <Content Include="Consultas\frmConsultarChamada.aspx" />
+    <Content Include="Consultas\frmConsultarGradeHorario.aspx" />
+    <Content Include="Consultas\frmConsultarPerfil.aspx" />
+    <Content Include="Consultas\frmConsultarPlanejamentoClinico.aspx" />
+    <Content Include="Consultas\frmConsultarPlanejamentoPedagogico.aspx" />
+    <Content Include="Consultas\frmConsultarProfissao.aspx" />
+    <Content Include="Consultas\frmConsultarTipoDocumento.aspx" />
+    <Content Include="Consultas\frmConsultarTurma.aspx" />
+    <Content Include="Consultas\frmConsultarUsuario.aspx" />
+    <Content Include="App_Themes\JQuery\JQuery\css\confirm.css" />
+    <Content Include="App_Themes\JQuery\JQuery\css\demo.css" />
+    <Content Include="App_Themes\JQuery\JQuery\img\confirm\button.gif" />
+    <Content Include="App_Themes\JQuery\JQuery\img\confirm\header.gif" />
+    <Content Include="App_Themes\JQuery\JQuery\js\confirm.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.simplemodal.js" />
+    <Content Include="Geral\mascaras.js" />
+    <Content Include="Geral\menuPort.css" />
+    <Content Include="Geral\principal.Master" />
+    <Content Include="Geral\PrincipalPortal.JPG" />
+    <Content Include="Componente\Mensagem.ascx" />
+    <Content Include="Componente\Aviso.css" />
+    <Content Include="Geral\portal.css" />
+    <Content Include="Portal\CadastrarGerenciador.aspx" />
+    <Content Include="Portal\ConsultarGerenciador.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajuda\frmSobre.aspx" />
+    <Content Include="App_Themes\icones\busca_calendario.png" />
+    <Content Include="App_Themes\icones\calendar.png" />
+    <Content Include="App_Themes\icones\calendar_link.png" />
+    <Content Include="App_Themes\icones\check.png" />
+    <Content Include="App_Themes\icones\Fechar.png" />
+    <Content Include="App_Themes\icones\listaEspera2.png" />
+    <Content Include="App_Themes\icones\password.png" />
+    <Content Include="App_Themes\icones\pencil_add.png" />
+    <Content Include="App_Themes\Imagens\App_portal\fundo.gif" />
+    <Content Include="App_Themes\Imagens\App_portal\GEPEX.png" />
+    <Content Include="Cadastros\frmCadastrarEndereco.aspx" />
+    <Content Include="Cadastros\frmCadastrarPermissoes.aspx" />
+    <Content Include="Cadastros\frmRelatorioRequerimentoMatricula.aspx" />
+    <Content Include="Cadastros\frmTrocarHorario.aspx" />
+    <Content Include="Consultas\frmConsultarEndereco.aspx" />
+    <Content Include="css\nyroModal.css" />
+    <Content Include="css\nyroModal.full.css" />
+    <Content Include="Geral\error.png" />
+    <Content Include="Geral\frmErro.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\left.png" />
+    <Content Include="img\loader.gif" />
+    <Content Include="img\right.png" />
+    <Content Include="img\veil.png" />
+    <Content Include="js\jquery-1.4.4.js" />
+    <Content Include="js\jquery-1.4.4.min.js" />
+    <Content Include="js\jquery-ui-1.8.9.custom.min.js" />
+    <Content Include="img\ajaxLoader.gif" />
+    <Content Include="img\close.gif" />
+    <Content Include="img\next.gif" />
+    <Content Include="img\prev.gif" />
+    <Content Include="js\jquery.nyroModal-1.5.2.js" />
+    <Content Include="js\jquery.nyroModal-1.5.2.min.js" />
+    <Content Include="js\jquery.nyroModal-1.5.2.pack.js" />
+    <Content Include="WebServicesInterno\PessoaAutoComplete.asmx" />
+    <Content Include="App_Themes\icones\fundoh3.png" />
+    <Content Include="App_Themes\icones\search.png" />
+    <Content Include="App_Themes\Imagens\App_portal\background.png" />
+    <Content Include="App_Themes\Imagens\App_portal\fundoMenu.png" />
+    <Content Include="App_Themes\Imagens\App_portal\logo.png" />
+    <Content Include="App_Themes\Imagens\App_portal\planoFonte.png" />
+    <Content Include="App_Themes\Imagens\App_portal\rodape.png" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery-ui.min.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.galeria.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.galleria.min.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.hotkeys-0.7.8-packed.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.jcarousel.pack.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.maskedinput.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.menu_ici.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.nyroModal-1.5.0.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.ui.core.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery.ui.datepicker.js" />
+    <Content Include="App_Themes\JQuery\JQuery\js\jquery_min.js" />
+    <Content Include="Portal\ComoApoiar.aspx" />
+    <Content Include="Portal\Eventos.aspx" />
+    <Content Include="Portal\Instituicao.aspx" />
+    <Content Include="Portal\Noticias.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Portal\portal.Master" />
+    <Content Include="Portal\prev.gif" />
+    <Content Include="upload\principal\fundo_cas.gif" />
+    <Content Include="upload\principal\img_1.jpg" />
+    <Content Include="upload\principal\img_2.jpg" />
+    <Content Include="upload\principal\img_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ajuda\Manual do Usuario.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Relatorio\" />
+    <Folder Include="upload\Portal\tmp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49225</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

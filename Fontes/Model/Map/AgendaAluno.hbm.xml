@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.AgendaAluno,Model" table="agenda_aluno" lazy="false">
+    <id name="Codigo">
+      <column name="AGA_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Recado" column="AGA_DESCRICAO" type="string" not-null="true" />
+    <property name="Data" column="AGA_DATA" type="DateTime" not-null="true" />
+    <many-to-one name="Aluno" class="Aluno" column="ALUNO_ALU_COD" foreign-key="FK_AgendaAluno" cascade="save-update" not-null="true" />
+    <many-to-one name="Docente" class="Docente" column="DOCENTE_DOC_COD" foreign-key="FK_AgendaAlunoDocente" cascade="save-update" not-null="true" />
+  </class>
+</hibernate-mapping>

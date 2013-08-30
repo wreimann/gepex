@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Disciplina,Model" table="disciplina" lazy="false">
+    <id name="Codigo">
+      <column name="DIS_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Materia" column="DIS_MATERIA" type="string" not-null="true" />
+    <property name="Descricao" column="DIS_DESCRICAO" type="string" not-null="true" />
+    <property name="Situacao" column="DIS_SITUACAO" type="bool" not-null="true" />
+  </class>
+</hibernate-mapping>

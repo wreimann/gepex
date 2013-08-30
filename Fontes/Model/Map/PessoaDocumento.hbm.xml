@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.PessoaDocumento" table="pessoa_documento" lazy="false">
+    <id name="Codigo">
+      <column name="PED_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <many-to-one name="Pessoa" class="Pessoa" column="PESSOA_PES_COD" foreign-key="FK_Pessoa" cascade="save-update" not-null="true" />
+    <many-to-one name="TipoDocumento" class="TipoDocumento" column="TIPO_DOCUMENTO_TDO_COD" foreign-key="FK_PessoaDocumento" cascade="save-update" not-null="true" />
+    <property name="OrgaoEmissor" column="PED_ORGAO_EMISSOR" type="string" not-null="false" />
+    <property name="UF" column="PED_UF" type="string" not-null="false" length="2" />
+    <property name="Numero" column="PED_NUMERO" type="string" not-null="true" length="35" />
+    <property name="DataEmissao" column="PED_DATA_EMISSAO" type="DateTime" not-null="false" />
+    <property name="InfAdicional" column="PED_INF_ADICIONAL" type="string" not-null="false" length="80"/>
+  </class>
+</hibernate-mapping>

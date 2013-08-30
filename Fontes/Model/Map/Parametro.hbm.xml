@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.Parametro,Model" table="parametro" lazy="false">
+    <id name="Codigo">
+      <column name="PAR_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Email" column="PAR_EMAIL" type="string" not-null="true" />
+    <property name="Cnae" column="PAR_CNAE" type="string" not-null="false" />
+    <property name="Cnpj" column="PAR_CNPJ" type="string" not-null="true" />
+    <property name="Instituicao" column="PAR_INSTITUICAO" type="string" not-null="true" />
+    <property name="Telefone" column="PAR_TELEFONE" type="decimal" not-null="true" />
+    <property name="TermoMatricula" column="PAR_TERMO_MATRICULA" type="string" not-null="true" />
+    <property name="Predical" column="PAR_PREDICAL" type="int" not-null="true" />
+    <property name="Complemento" column="PAR_COMPLEMENTO" type="string" not-null="false" />
+    <property name="MaximoDiasAtendimento" column="PAR_MAXIMO_DIAS_ATENDIMENTO" type="int" not-null="false" />
+    <many-to-one name="Endereco" class="Endereco" column="ENDERECO_END_COD" foreign-key="FK_ParametroEndereco" cascade="save-update" not-null="true" />
+  </class>
+</hibernate-mapping>

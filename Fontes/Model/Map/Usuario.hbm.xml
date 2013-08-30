@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+   <class name="Model.Entidade.Usuario,Model" table="usuario" lazy="false">
+     <id name="Codigo">
+       <column name="USU_COD" sql-type="int" not-null="true"/>
+       <generator class="increment" />
+     </id>
+     <many-to-one name="Pessoa" class="Pessoa" column="PESSOA_PES_COD" foreign-key="FK_UsuarioPessoa" cascade="save-update" not-null="true" />
+     <many-to-one name="Perfil" class="Perfil" column="PERFIL_PER_COD" foreign-key="FK_UsuarioPerfil" cascade="save-update" not-null="true" />
+    <property name="Login" column="USU_LOGIN" type="string" not-null="true" />
+    <property name="Situacao" column="USU_SITUACAO" type="string" not-null="true" />
+    <property name="Senha" column="USU_SENHA" type="string" not-null="true" />
+    <property name="DataAlteracao" column="USU_DATA_ALTERACAO" type="DateTime" />
+    <property name="Motivo" column="USU_MOTIVO" type="string" />
+  </class>
+</hibernate-mapping>

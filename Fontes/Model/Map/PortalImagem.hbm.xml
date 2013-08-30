@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.PortalImagem,Model" table="portal_imagem" lazy="false">
+    <id name="Codigo">
+      <column name="POI_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="Imagem" column="POI_IMAGEM" type="string" not-null="true" />
+    <property name="Diretorio" column="POI_DIRETORIO" type="string" not-null="true" />
+    <many-to-one name="Portal" class="Portal" column="PORTAL_POR_COD" foreign-key="FK_Imagens_Portal" cascade="save-update" not-null="true" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" namespace="Model.Entidade" assembly="Model">
+  <class name="Model.Entidade.GradeHorario,Model" table="grade_horario" lazy="false">
+    <id name="Codigo">
+      <column name="GRH_COD" sql-type="int" not-null="true"/>
+      <generator class="increment" />
+    </id>
+    <property name="DiaSemana" column="GRH_DIA_SEMANA" type="int" not-null="true" />
+    <property name="Horario" column="GRH_HORARIO" type="int" not-null="true" />
+    <many-to-one name="Disciplina" class="Disciplina" column="DISCIPLINA_DIS_COD" foreign-key="FK_GradeHorarioDisciplina" cascade="save-update" not-null="true" />
+    <many-to-one name="Docente" class="Docente" column="DOCENTE_DOC_COD" foreign-key="FK_GradeHorarioDocente" cascade="save-update" not-null="true" />
+    <many-to-one name="Turma" class="Turma" column="TURMA_TUR_COD" foreign-key="FK_GradeHorarioTurma" cascade="save-update" not-null="true" />
+  </class>
+</hibernate-mapping>
