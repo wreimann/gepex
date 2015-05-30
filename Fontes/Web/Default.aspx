@@ -1,81 +1,88 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Portal/portal.Master" 
-    AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Web.Portal.Default" 
+﻿<%@ Page Language="C#" MasterPageFile="~/Portal/portal.Master"
+    AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Web.Portal.Default"
     Title="Escola de Educação Especial 29 de Março" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .style2
-        {
+        .style2 {
             width: 259px;
         }
-        .style4
-        {
+
+        .style4 {
             height: 29px;
         }
-        .style8
-        {
+
+        .style8 {
             height: 20px;
             color: #3366FF;
             font-weight: bold;
             background-color: #FFFFFF;
         }
-        .style10
-        {
+
+        .style10 {
             font-size: large;
             color: #FFFFFF;
         }
-        .style15
-        {
+
+        .style15 {
             width: 340px;
             color: #FF6600;
             font-weight: bold;
-            text-align:left;
-            vertical-align:text-top;
+            text-align: left;
+            vertical-align: text-top;
             display: table-cell;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table id="tabImagens" style="width: 99%">
-<tr>
-<td colspan="3" style="background-image: url('../../App_Themes/Imagens/App_portal/planoFonte.png'); height: 34px;" 
-        class="style8"><a href="<%=ResolveClientUrl("~/Default.aspx")%>" class="style10">Início</a>
-</td>
-</tr>
-<tr>
-<td>
-    <a rel="gal" href="upload/principal/img_1.jpg" class="nyroModal" title="">
-    <img src="upload/principal/img_1.jpg" alt="" style="width: 195px"/></a>
-</td>
-<td>
-    <a rel="gal" href="upload/principal/img_2.jpg" class="nyroModal" title="">
-    <img src="upload/principal/img_2.jpg"  alt="" style="width: 195px"/></a>
-</td>
- <td>
-     <a rel="gal" href="upload/principal/img_3.jpg" class="nyroModal" title="">
-     <img src="upload/principal/img_3.jpg" alt="" style="width: 195px"/></a>
-</td>
-</tr>
-</table>
-<table style="width: 99%">
-<tr>
-<td class="style15">
-    <h2 style="background-image: url('../../App_Themes/Imagens/App_portal/planoFonte.png'); height: 34px;">
-        <a href="../Portal/Eventos.aspx" class="style10">Eventos</a></h2></td>
-    <td  class="style15">
-        <h2 style="background-image: url('../../App_Themes/Imagens/App_portal/planoFonte.png'); height: 34px;">
-        <a href="../Portal/Noticias.aspx" class="style10">Notícias</a></h2></td>
-</tr>
-<tr>
-<td class="style15" >
-    <asp:Panel ID="Panel1" runat="server">
-    </asp:Panel>
-    </td>
-    <td class="style15">
-    <asp:Panel ID="Panel2" runat="server">    
-    </asp:Panel>    
-    </td>
-    
-</tr>
-</table>
+        <tr>
+            <td colspan="3" style="background-image: url('../../App_Themes/Imagens/App_portal/planoFonte.png'); height: 34px;"
+                class="style8"><a href="<%=ResolveClientUrl("~/Default.aspx")%>" class="style10">Início</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a rel="gal" href="upload/principal/img_1.jpg" class="nyroModal" title="">
+                    <img src="upload/principal/img_1.jpg" alt="" style="width: 195px; height: 110px;" /></a>
+            </td>
+            <td>
+                <a rel="gal" href="upload/principal/img_2.jpg" class="nyroModal" title="">
+                    <img src="upload/principal/img_2.jpg" alt="" style="width: 195px; height: 110px;" /></a>
+            </td>
+            <td>
+                <a rel="gal" href="upload/principal/img_3.jpg" class="nyroModal" title="">
+                    <img src="upload/principal/img_3.jpg" alt="" style="width: 195px; height: 110px;" /></a>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <a href="https://pt-br.facebook.com/pages/Escola-29-de-Mar%C3%A7o-Educa%C3%A7%C3%A3o-Especial/425346880843783" style="color:slateblue; font-size:large;">
+            <img alt="Facabook" src="../App_Themes/icones/facebook.png" height="32px" width="32px" style="vertical-align:middle;" />&nbsp;Curta nossa página e fique por dentro de todas as notícias e informações.
+        </a>
+    </div>
+    <table style="width: 99%">
+        <tr>
+            <td class="style15">
+                <h2 style="background-image: url('../../App_Themes/Imagens/App_portal/planoFonte.png'); height: 34px;">
+                    <a href="../Portal/Eventos.aspx" class="style10">Eventos</a></h2>
+            </td>
+            <td class="style15">
+                <h2 style="background-image: url('../../App_Themes/Imagens/App_portal/planoFonte.png'); height: 34px;">
+                    <a href="../Portal/Noticias.aspx" class="style10">Notícias</a></h2>
+            </td>
+        </tr>
+        <tr>
+            <td class="style15">
+                <asp:Panel ID="Panel1" runat="server">
+                </asp:Panel>
+            </td>
+            <td class="style15">
+                <asp:Panel ID="Panel2" runat="server">
+                </asp:Panel>
+            </td>
+
+        </tr>
+    </table>
 </asp:Content>
 

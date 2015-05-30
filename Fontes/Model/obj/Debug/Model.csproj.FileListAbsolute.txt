@@ -1,0 +1,11 @@
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\bin\Debug\app.config
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\bin\Debug\Model.dll
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\bin\Debug\Model.pdb
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\bin\Debug\MySql.Data.dll
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\bin\Debug\NHibernate.dll
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\obj\Debug\Model.dll
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\obj\Debug\Model.pdb
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\bin\Debug\Iesi.Collections.dll
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Wellingthon\Documents\GitHub\gepex\Fontes\Model\bin\Debug\log4net.dll

@@ -1,54 +1,150 @@
-html,body{margin:0;padding:0}
-body{font: 76% arial,sans-serif;text-align:center; background-image:url('../../App_Themes/Imagens/App_portal/background.png')}
-p{margin:0 10px 10px; text-align:justify;}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 76% arial,sans-serif;
+    text-align: center;
+    background-image: url('../../App_Themes/Imagens/App_portal/background.png');
+}
+
+p {
+    margin: 0 10px 10px;
+    text-align: justify;
+}
+
 #centro {
-width:140px;
-height:100px;
-margin-top:10px;
-margin-right:5px;
-text-align: center;
-}
-a{padding:10px; text-decoration:none; color:#000000;  font-size: small;}
-div#header{background-image:url('../../App_Themes/Imagens/App_portal/logo.png');
-           background-repeat:no-repeat;
-		 background-position:center;
-           }
-div#header h1{height:147px;
-line-height:80px;margin:0;padding-left:10px;
+    width: 140px;
+    height: 100px;
+    margin-top: 10px;
+    margin-right: 5px;
+    text-align: center;
 }
 
-div#container{background-image:url('../../App_Themes/Imagens/App_portal/fundo.gif')}
-div#container{text-align:left}
-div#content p{line-height:1.4}
-div#navigation{background:#F6F0E0;}
-div#navigation ul{float:left; margin:10px 0; padding:0; list-style-type:none;}
-div#navigation li{margin-bottom:10px;}
-div#login{background-image:url('../../App_Themes/Imagens/App_portal/fundoMenu.png')}
-div#extra{background-image:url('../../App_Themes/Imagens/App_portal/fundoMenu.png')}
-div#footer{background-image:url('../../App_Themes/Imagens/App_portal/rodape.png')}
-div#footer p{margin:0;padding:5px 10px}
-div#container{width:1003px;margin:0 auto}
-div#wrapper{float:left;width:100%}
-div#content{width: 670px;
-	margin-top:20px;
-	margin-left: 140px;
-	margin-right: 200px;
-	margin-bottom: 0;
+a {
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-size: small;
+}
 
+div#header {
+    background-image: url('../../App_Themes/Imagens/App_portal/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top:-15px;
 }
-#Central {    
 
-}
-div#navigation{float:left;width:150px;margin-left:-600px}
-div#extra{float:left;width:180px;
-margin-left:-185px; margin-top:125px;
-}
-div#login{float:left;width:180px;
-margin-left:-185px; margin-top:20px;
-}
-div#menu{background-image:url('../../App_Themes/Imagens/App_portal/fundoMenu.gif')}
-div#menu{float:left;width:165px;margin-top:20px;margin-left:-30px;
-}
-div#footer{clear:left;width:100%; height:53px;}
+    div#header h1 {
+        height: 147px;
+        line-height: 80px;
+        margin: 0;
+        padding-left: 10px;
+    }
 
-.Tabela{table-layout:fixed; }
+div#container {
+    background-image: url('../../App_Themes/Imagens/App_portal/fundo.gif');
+}
+
+div#container {
+    text-align: left;
+}
+
+div#content p {
+    line-height: 1.4;
+}
+
+div#navigation {
+    background: #F6F0E0;
+}
+
+    div#navigation ul {
+        float: left;
+        margin: 10px 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    div#navigation li {
+        margin-bottom: 10px;
+    }
+
+div#login {
+    background-image: url('../../App_Themes/Imagens/App_portal/fundoMenu.png');
+}
+
+div#extra {
+    background-image: url('../../App_Themes/Imagens/App_portal/fundoMenu.png');
+}
+
+div#footer {
+    background-image: url('../../App_Themes/Imagens/App_portal/rodape.png');
+}
+
+    div#footer p {
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+div#container {
+    width: 1003px;
+    margin: 0 auto;
+}
+
+div#wrapper {
+    float: left;
+    width: 100%;
+}
+
+div#content {
+    width: 670px;
+    margin-top: 20px;
+    margin-left: 140px;
+    margin-right: 200px;
+    margin-bottom: 0;
+}
+
+#Central {
+}
+
+div#navigation {
+    float: left;
+    width: 150px;
+    margin-left: -600px;
+}
+
+div#extra {
+    float: left;
+    width: 180px;
+    margin-left: -185px;
+    margin-top: 125px;
+}
+
+div#login {
+    float: left;
+    width: 180px;
+    margin-left: -185px;
+    margin-top: 20px;
+}
+
+div#menu {
+    background-image: url('../../App_Themes/Imagens/App_portal/fundoMenu.gif');
+}
+
+div#menu {
+    float: left;
+    width: 165px;
+    margin-top: 20px;
+    margin-left: -30px;
+}
+
+div#footer {
+    clear: left;
+    width: 100%;
+    height: 60px;
+}
+
+.Tabela {
+    table-layout: fixed;
+}

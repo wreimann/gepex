@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Untitled Page</title>
+    <title>Escola de Educação Especial 29 de Março</title>
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
     <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <link rel="stylesheet" type="text/css" href="../Geral/portal.css" />
@@ -13,7 +13,7 @@
     <asp:ContentPlaceHolder ID="Myholder" runat="server">
         <script type="text/javascript" src="<%=ResolveClientUrl("~/js/jquery-1.4.4.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/js/jquery-1.4.4.min.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/js/jquery-ui-1.8.9.custom.min.js")%>"></script>  
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/js/jquery-ui-1.8.9.custom.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/js/jquery.nyroModal-1.5.2.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/js/jquery.nyroModal-1.5.2.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/js/jquery.nyroModal-1.5.2.pack.js")%>"></script>
@@ -21,142 +21,149 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
-        .style1
-        {
+        .style1 {
             text-align: center;
         }
-        .style2
-        {
+
+        .style2 {
             text-align: right;
             font-weight: bold;
         }
-        .style3
-        {
+
+        .style3 {
             color: #FF6600;
             font-size: medium;
             font-weight: bold;
         }
-        .style4
-        {
+
+        .style4 {
             color: #3366FF;
             font-size: medium;
             text-decoration: underline;
         }
-        .style5
-        {
+
+        .style5 {
             text-decoration: underline;
             font-family: Arial, Helvetica, sans-serif;
             color: #3366FF;
         }
-        .style6
-        {
+
+        .style6 {
             font-family: Arial, Helvetica, sans-serif;
         }
-        .style11
-        {
+
+        .style11 {
             color: #FFFFFF;
         }
-        .style13
-        {
+
+        .style13 {
             color: #FFFFFF;
             font-weight: bold;
         }
-        .style14
-        {
+
+        .style14 {
             color: #3366FF;
             font-size: medium;
         }
     </style>
 </head>
 <body>
-<form id="frmMain" runat="server" enctype="multipart/form-data"> 
+    <form id="frmMain" runat="server" enctype="multipart/form-data">
 
-<div id="container">
-<div id="header"><a href="<%=ResolveClientUrl("~/Default.aspx")%>"><h1>&nbsp;</h1></a></div>
+        <div id="container">
+            <div id="header">
+                <a href="<%=ResolveClientUrl("~/Default.aspx")%>">
+                    <h1>&nbsp;</h1>
+                </a>
+            </div>
 
-<div id="wrapper">
-<div id="menu">
-  <div id="menuPortal" align="center">
-	<ul>
-		<li><a href="<%=ResolveClientUrl("~/Default.aspx")%>">Início</a></li>
-		<li><a href="<%=ResolveClientUrl("~/Portal/Instituicao.aspx")%> " class="green">a Instituição</a></li>
-		<li><a href="<%=ResolveClientUrl("~/Portal/ComoApoiar.aspx")%>" class="blue">Como Ajudar</a></li>
-		<li><a href="<%=ResolveClientUrl("~/Portal/Noticias.aspx")%>" class="orange">Notícias</a></li>
-		<li><a href="<%=ResolveClientUrl("~/Portal/Eventos.aspx")%>" class="brn">Eventos</a></li>	
-		<li><a href="http://escola29demarco.wordpress.com/" class="red">Blog</a></li>
-									
-	</ul>
-</div>
+            <div id="wrapper">
+                <div id="menu">
+                    <div id="menuPortal" align="center">
+                        <ul>
+                            <li><a href="<%=ResolveClientUrl("~/Default.aspx")%>">Início</a></li>
+                            <li><a href="<%=ResolveClientUrl("~/Portal/Instituicao.aspx")%> " class="green">a Instituição</a></li>
+                            <li><a href="<%=ResolveClientUrl("~/Portal/ComoApoiar.aspx")%>" class="blue">Como Ajudar</a></li>
+                            <li><a href="<%=ResolveClientUrl("~/Portal/Noticias.aspx")%>" class="orange">Notícias</a></li>
+                            <li><a href="<%=ResolveClientUrl("~/Portal/Eventos.aspx")%>" class="brn">Eventos</a></li>
+                            <li><a href="http://escola29demarco.wordpress.com/" class="red">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="content">
+                    <div>
+                        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+            <div id="login">
+                <table>
+                    <tr>
+                        <td colspan="3" style="text-align: center" class="style3"><span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </span><span class="style5">Portal Interno</span>
+                            <img alt="Acesso Restrito" src="../App_Themes/icones/password.png"
+                                id="imgAcessoRestrito" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style2">Login:</td>
+                        <td>
+                            <asp:TextBox ID="txtLogin" runat="server" Width="115px" MaxLength="10"
+                                ValidationGroup="Login"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:RequiredFieldValidator ID="rfvLogin" runat="server"
+                                ControlToValidate="txtLogin" Display="Dynamic"
+                                ErrorMessage="Informe o campo: Login.">*</asp:RequiredFieldValidator>
 
-  </div>  
-    <div id="content">
-    <div>
-        <asp:ScriptManager ID="ScriptManager1" runat="server" />
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
-    </div>
-  </div>
-    <div id="login">
-    <table>
-    <tr>
-    <td colspan="3" style="text-align: center" class="style3"><span class="style6">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </span><span class="style5">Portal Interno</span>
-     <img alt="Acesso Restrito" src="../App_Themes/icones/password.png" 
-            id="imgAcessoRestrito" />
-    </td>
-    </tr>
-    <tr>
-    <td class="style2">Login:</td>
-    <td><asp:TextBox ID="txtLogin" runat="server" Width="115px" MaxLength="10" 
-            ValidationGroup="Login"></asp:TextBox>
-    </td>
-    <td>
-    <asp:RequiredFieldValidator ID="rfvLogin" runat="server" 
-                    ControlToValidate="txtLogin" Display="Dynamic" 
-                    ErrorMessage="Informe o campo: Login.">*</asp:RequiredFieldValidator>
-    
-    </td>
-    </tr>
-        <tr>
-    <td class="style2">Senha:</td>
-    <td><asp:TextBox ID="txtSenha" runat="server" Width="115px" TextMode="Password" 
-            MaxLength="8" ValidationGroup="Login"></asp:TextBox></td>
-    <td>
-    <asp:RequiredFieldValidator ID="rfvSenha" runat="server" 
-                    ControlToValidate="txtSenha" Display="Dynamic" 
-                    ErrorMessage="Informe o campo: Senha.">*</asp:RequiredFieldValidator>
-    </td>
-    </tr>
-    <tr>
-    <td></td>
-    <td colspan="2" align="right" 
-            style="font-family: Arial, Helvetica, sans-serif; font-size: x-small">
-        <asp:LinkButton ID="lkbEnviar" runat="server" Font-Bold="True" 
-            onclick="lkbEnviar_Click">Entrar</asp:LinkButton>
-    </td>
-    </tr>
-    </table>  
-  </div>
-  <br/>
-  <div id="extra">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style2">Senha:</td>
+                        <td>
+                            <asp:TextBox ID="txtSenha" runat="server" Width="115px" TextMode="Password"
+                                MaxLength="8" ValidationGroup="Login"></asp:TextBox></td>
+                        <td>
+                            <asp:RequiredFieldValidator ID="rfvSenha" runat="server"
+                                ControlToValidate="txtSenha" Display="Dynamic"
+                                ErrorMessage="Informe o campo: Senha.">*</asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2" align="right"
+                            style="font-family: Arial, Helvetica, sans-serif; font-size: x-small">
+                            <asp:LinkButton ID="lkbEnviar" runat="server" Font-Bold="True"
+                                OnClick="lkbEnviar_Click">Entrar</asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <div id="extra">
 
-    <strong><span class="style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style4">
-      Colaboradores&nbsp; </span></strong>&nbsp;<asp:Panel ID="Panel1" runat="server">
-          
-      </asp:Panel>
-  </div>
-  <div id="footer">
-    <p class="style1"><span class="style13">Escola 29 de Março</span>
-    <br/><span class="style11">Rua das Laranjeiras, 72 
-        &nbsp;&nbsp;Bairro Alto, Curitiba - PR</span>
-    <br />
-        <span class="style13">Telefone</span><span class="style11">:(41) 3205-6692&nbsp; -
-        </span> 
-         <a href="mailto:29@escola29demarco.com?Subject=Retorno" class="style13" >29@escola29demarco.com</a></p>
-  </div>
-</div>
-</form>
+                <strong><span class="style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="style4">Colaboradores&nbsp; </span></strong>&nbsp;<asp:Panel ID="Panel1" runat="server">
+                </asp:Panel>
+            </div>
+            <div id="footer">
+                <p class="style1">
+                    <span class="style13">Escola de Educação Especial 29 de Março</span>
+                    <br />
+                    <span class="style11">Rua Laranjeiras, 72 &nbsp;&nbsp;Bairro Alto, Curitiba - PR</span>
+                    <br />
+                    <span class="style13">Telefone</span><span class="style11">:(41) 3205-6692&nbsp; -</span>
+                    <a href="mailto:29@escola29demarco.com?Subject=Retorno" class="style13">29@escola29demarco.com</a>
+                </p>
+
+            </div>
+            <div style="margin-top:-55px;margin-left:650px;">
+                <a href="https://pt-br.facebook.com/pages/Escola-29-de-Mar%C3%A7o-Educa%C3%A7%C3%A3o-Especial/425346880843783" style="color:white;">
+                    <img alt="Facabook" src="../App_Themes/icones/facebook.png" height="24px" width="24px"style="vertical-align:middle;" />&nbsp;Curta nossa página
+                </a>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
